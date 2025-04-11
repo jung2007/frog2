@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오.점.추</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <p id="message">오늘의 점심 추천 메뉴는?</p>
+    <button onclick="showRandomMessage()">눌러서 확인하기</button>
+
+    <script>
+        function showRandomMessage() {
+            const messages = [
+                "느끼한 날에는 , 떡볶이.",
+                "비오는 날에는 , 우동",
+                "파티 같은 날에는, 피자.",
+                "새콤한게 땡길때는 , 쫄면
+            ];
+            document.getElementById("message").innerText = messages[Math.floor(Math.random() * messages.length)];
+        }
+    </script>
+</body>
+</html>
